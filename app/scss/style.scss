@@ -1,17 +1,7 @@
-html {
-    box-sizing: border-box;
-}
+@import "_fonts";
+@import "_vars";
+@import "_global";
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-    background-color: cadetblue;
-}
-
-.box {
-    display: flex;
-}
+@import "page-index/header";
+@import "page-index/social";
+@import "page-index/about";
