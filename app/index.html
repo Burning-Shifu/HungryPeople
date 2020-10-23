@@ -121,7 +121,7 @@
       </div>
     </section>
 
-    <section class="section" style="background-image: url(img/our-team-bg2.jpg);">
+    <section class="section" style="background-image: url(img/our-team-bg2.jpg);" id="team">
       <div class="container">
         <div class="title section__title">OUR TEAM</div>
         <div class="section__inner d-flex">
@@ -137,6 +137,88 @@
 
           <div class="section__img-wrapper">
             <img class="section__img" src="img/chef-img.jpg" alt="Photo of our master chef">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section book" id="booking">
+      <div class="container">
+        <div class="section__inner d-flex">
+          <div class="section__content">
+            <h2 class="heading heading--small">Book A Table</h2>
+            <form class="section__form" action="post">
+              <label for="book-name" class="section__label">Name</label>
+              <input class="section__input" type="text" id="book-name" name="name" placeholder="Name">
+              <label for="book-email" class="section__label">Email</label>
+              <input class="section__input" type="email" id="book-email" name="email" placeholder="Email">
+
+              <label for="book-phone" class="section__label">Phone</label>
+              <input class="section__input" type="tel" id="book-phone" name="phone" placeholder="Phone">
+              <label for="book-num-people" class="section__label">Number of People</label>
+              <select class="section__input section__select" id="book-num-people" name="num-people"  required>
+                <option class="section__option" value="" disabled selected>People</option>
+                <option class="section__option" value="1-2 persons">1-2 persons</option>
+                <option class="section__option" value="3-5 persons">3-5 persons</option>
+                <option class="section__option" value="5-10 persons">6-10 persons</option>
+                <option class="section__option" value="10+ persons">10+ persons</option>
+              </select>
+
+              <label for="book-date" class="section__label">Date</label>
+              <input class="section__input" type="date" id="book-date" name="date" placeholder="Date (mm/dd)">
+              <label for="" class="section__label">Time</label>
+              <select class="section__input section__select" id="book-time" name="time" required>
+                <option class="section__option" value="" disabled selected>Time</option>
+                <option class="section__option" value="10:00">10:00</option>
+                <option class="section__option" value="11:00">11:00</option>
+                <option class="section__option" value="13:00">13:00</option>
+                <option class="section__option" value="14:00">14:00</option>
+                <option class="section__option" value="15:00">15:00</option>
+                <option class="section__option" value="16:00">16:00</option>
+                <option class="section__option" value="17:00">17:00</option>
+                <option class="section__option" value="18:00">18:00</option>
+                <option class="section__option" value="19:00">19:00</option>
+                <option class="section__option" value="20:00">20:00</option>
+                <option class="section__option" value="21:00">21:00</option>
+              </select>
+
+              <button class="btn section__form-btn" type="submit">Book Now</button>
+            </form>
+          </div>
+
+          <div class="section__img-wrapper">
+            <img class="section__img" src="img/book-img.jpg" alt="clock">
+          </div>
+        </div>
+
+        <p class="section__extra-text">
+          Mon - Fri:
+          <span class="section__extra-text section__extra-text--bold">8PM - 10PM,</span>
+          Sat - Sun:
+          <span class="section__extra-text section__extra-text--bold">8PM - 3AM,</span>
+          Phone: 
+          <a class="section__extra-text section__extra-text--bold" href="tel:40729131637">+40 729 131 637</a>/<a class="section__extra-text section__extra-text--bold" href="tel:40726458782">+40 726 458 782</a>
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section" style="background-image: url(img/specialty-bg.jpg);">
+      <div class="container">
+        <div class="title section__title">Specialties</div>
+        <div class="section__inner d-flex">
+          <div class="section__content">
+            <h2 class="heading heading--small">chocolate pancakes</h2>
+            <p class="section__text section__text--bold">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+            </p>
+            <p class="section__text">
+              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+            </p>
+          </div>
+
+          <div class="section__img-wrapper">
+            <img class="section__img" src="img/choko-img.jpg" alt="Photo of our master chef">
           </div>
         </div>
       </div>

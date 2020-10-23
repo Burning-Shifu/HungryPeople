@@ -41,7 +41,7 @@ svg path {
 
 .title {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   letter-spacing: 0.5em;
   text-transform: uppercase;
@@ -78,11 +78,12 @@ svg path {
   width: 100%;
   padding: 20px 20px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   text-transform: uppercase;
   background-color: $yellow;
   white-space: nowrap;
+  border: none;
   border-radius: 5px;
 
   &--transp {

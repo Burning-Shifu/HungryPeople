@@ -58,7 +58,7 @@
     line-height: 24px;
 
     &--bold {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 18px;
       line-height: 28px;
     }
@@ -86,4 +86,63 @@
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
   }
+
+  // form
+
+  &__form {
+    margin-top: 20px;
+    margin-right: -5px;
+  }
+
+  &__label {
+    font-size: 0;
+  }
+
+  &__input {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: calc(100% / 2 - 11px);
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 5px;
+
+
+    &::placeholder {
+      color: $placeholder;
+    }
+
+    &[type="date"] {
+      padding: 13px;
+    }
+  }
+
+  &__select {
+    appearance: none;
+
+    &:required:invalid {
+      color: $placeholder;
+    }
+
+    &:invalid > option[value=""][disabled] {
+      display: none;
+    }
+  }
+
+  &__option {
+    color: #000;
+  }
+
+  // end form
+
+  &__extra-text {
+    margin-top: 40px;
+    font-size: 12px;
+    text-align: center;
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
 }
