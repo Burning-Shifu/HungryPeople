@@ -20,3 +20,78 @@
     margin: 0 10px;
   }
 }
+
+.menu {
+  text-align: center;
+
+  &__section-text {
+    max-width: 550px;
+    margin: 25px auto 50px;
+  }
+
+  &__category {
+    padding: 20px 40px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid rgba($dark, 0.2);
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  &__list {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    text-transform: uppercase;
+    column-count: 3;
+    column-gap: 70px;
+  }
+
+  &__name,
+  &__dots,
+  &__price {
+    display: inline-block;
+  }
+
+  &__item {
+    padding: 15px 0;
+    font-family: "Banny", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  &__name {
+    max-width: 255px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &::after {
+      content: " . . . . . . . . . . . . . . . . . .";
+    }
+  }
+
+  &__price {
+    padding: 0 5px;
+    vertical-align: top;
+  }
+
+  &__descr {
+    display: block;
+    max-width: 255px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: $placeholder;
+    text-transform: initial;
+  }
+}

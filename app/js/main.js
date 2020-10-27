@@ -4,3 +4,5 @@ let swiper = new Swiper('.swiper-container', {
     clickable: true,
   },
 });
+
+var mixer = mixitup('.menu');
