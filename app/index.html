@@ -19,13 +19,13 @@
               <a href="#" class="header__menu-link">HOME</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">ABOUT</a>
+              <a href="#about" class="header__menu-link">ABOUT</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">TEAM</a>
+              <a href="#team" class="header__menu-link">TEAM</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">BOOKING</a>
+              <a href="#booking" class="header__menu-link">BOOKING</a>
             </li>
           </ul>
         </nav>
@@ -35,13 +35,13 @@
         <nav class="header__menu">
           <ul class="header__menu-list indent-0 d-flex">
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">MENU</a>
+              <a href="#menu" class="header__menu-link">MENU</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">GALERIE</a>
+              <a href="#gallery" class="header__menu-link">GALLERY</a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">EVENTS</a>
+              <a href="#events" class="header__menu-link">EVENTS</a>
             </li>
             <li class="header__menu-item">
               <a href="#" class="header__menu-link">CONTACT</a>
@@ -203,7 +203,7 @@
       </div>
     </section>
 
-    <section class="section" style="background-image: url(img/specialty-bg.jpg);">
+    <section class="section" style="background-image: url(img/specialty-bg.jpg);" id="gallery">
       <div class="container">
         <div class="title section__title">Specialties</div>
 
@@ -471,23 +471,27 @@
       </div>
     </section>
 
-    <section class="section" style="background-image: url(img/events-bg.jpg);" id="team">
+    <section class="section events" style="background-image: url(img/events-bg.jpg);" id="events">
       <div class="container">
         <div class="title section__title">PRIVATE EVENTS</div>
         <div class="section__inner d-flex">
-          <div class="section__content">
-            <h2 class="heading heading--small">MASTER CHEF</h2>
 
+          <div class="section__img-wrapper events__img-wrapper">
+            <span class="events__title">weddings</span>
+            <img class="section__img " src="img/event-wedding.jpg" alt="Photo of our master chef">
           </div>
 
-          <div class="section__img-wrapper">
-            <img class="section__img" src="img/event-wedding.jpg" alt="Photo of our master chef">
-          </div>
-
-          <div class="section__img-wrapper">
+          <div class="section__img-wrapper events__img-wrapper">
+            <span class="events__title">corporate parties</span>
             <img class="section__img" src="img/event-corporate.jpg" alt="Photo of our master chef">
           </div>
         </div>
+
+        <p class="section__extra-text">
+          For private events please call:
+          <a class="section__extra-text section__extra-text--bold" href="tel:40729131637">+40 729 131 637</a>/<a class="section__extra-text section__extra-text--bold" href="tel:40726458782">+40 726 458 782</a>
+          or use the contact form.
+        </p>
       </div>
     </section>
 

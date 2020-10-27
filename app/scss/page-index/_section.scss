@@ -3,6 +3,7 @@
 
   &:nth-child(even) {
     position: relative;
+    padding: 43px 0 100px;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -39,8 +40,14 @@
     }
   }
 
+  &:last-of-type {
+    .section__inner {
+      flex-direction: row;
+    }
+  }
+
   &__title {
-    margin: 0 auto 40px;
+    margin: 0 auto 43px;
     width: fit-content;
   }
 
@@ -146,7 +153,8 @@
   // end form
 
   &__extra-text {
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-bottom: -55px;
     font-size: 12px;
     text-align: center;
 
