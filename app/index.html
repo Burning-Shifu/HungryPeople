@@ -38,10 +38,10 @@
               <a href="#menu" class="header__menu-link">MENU</a>
             </li>
             <li class="header__menu-item">
-              <a href="#gallery" class="header__menu-link">GALLERY</a>
+              <a href="#events" class="header__menu-link">EVENTS</a>
             </li>
             <li class="header__menu-item">
-              <a href="#events" class="header__menu-link">EVENTS</a>
+              <a href="#gallery" class="header__menu-link">GALLERY</a>
             </li>
             <li class="header__menu-item">
               <a href="#" class="header__menu-link">CONTACT</a>
@@ -149,14 +149,14 @@
             <h2 class="heading heading--small">Book A Table</h2>
             <form class="section__form" action="post">
               <label for="book-name" class="section__label">Name</label>
-              <input class="section__input" type="text" id="book-name" name="name" placeholder="Name">
+              <input class="section__input book__input" type="text" id="book-name" name="name" placeholder="Name">
               <label for="book-email" class="section__label">Email</label>
-              <input class="section__input" type="email" id="book-email" name="email" placeholder="Email">
+              <input class="section__input book__input" type="email" id="book-email" name="email" placeholder="Email">
 
               <label for="book-phone" class="section__label">Phone</label>
-              <input class="section__input" type="tel" id="book-phone" name="phone" placeholder="Phone">
+              <input class="section__input book__input" type="tel" id="book-phone" name="phone" placeholder="Phone">
               <label for="book-num-people" class="section__label">Number of People</label>
-              <select class="section__input section__select" id="book-num-people" name="num-people"  required>
+              <select class="section__input section__select book__input" id="book-num-people" name="num-people"  required>
                 <option class="section__option" value="" disabled selected>People</option>
                 <option class="section__option" value="1-2 persons">1-2 persons</option>
                 <option class="section__option" value="3-5 persons">3-5 persons</option>
@@ -165,9 +165,9 @@
               </select>
 
               <label for="book-date" class="section__label">Date</label>
-              <input class="section__input" type="date" id="book-date" name="date" placeholder="Date (mm/dd)">
+              <input class="section__input book__input" type="date" id="book-date" name="date" placeholder="Date (mm/dd)">
               <label for="" class="section__label">Time</label>
-              <select class="section__input section__select" id="book-time" name="time" required>
+              <select class="section__input section__select book__input" id="book-time" name="time" required>
                 <option class="section__option" value="" disabled selected>Time</option>
                 <option class="section__option" value="10:00">10:00</option>
                 <option class="section__option" value="11:00">11:00</option>
@@ -182,7 +182,7 @@
                 <option class="section__option" value="21:00">21:00</option>
               </select>
 
-              <button class="btn section__form-btn" type="submit">Book Now</button>
+              <button class="btn" type="submit">Book Now</button>
             </form>
           </div>
 
@@ -203,7 +203,7 @@
       </div>
     </section>
 
-    <section class="section" style="background-image: url(img/specialty-bg.jpg);" id="gallery">
+    <section class="section" style="background-image: url(img/specialty-bg.jpg);">
       <div class="container">
         <div class="title section__title">Specialties</div>
 
@@ -275,7 +275,7 @@
     <section class="section menu" id="menu">
       <div class="container">
         <h2 class="heading heading--small">DELICIOUS MENU</h2>
-        <p class="section__text section__text--bold menu__section-text">
+        <p class="section__text section__text--bold section__text--narrow">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestieest a, tempor magna.
         </p>
 
@@ -495,11 +495,80 @@
       </div>
     </section>
 
+    <section class="gallery" id="gallery">
+      <img class="gallery__img" src="img/gallery/main.jpg" alt="Main hall of restaurant with a signboard.">
+      <img class="gallery__img" src="img/gallery/fireplace.jpg" alt="Fireplace.">
+      <img class="gallery__img" src="img/gallery/small-hall.jpg" alt="Small hall with tables for three-four people.">
+      <img class="gallery__img" src="img/gallery/event-hall.jpg" alt="Big hall for celebrations.">
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__inner">
+          <div class="section__content">
+            <h2 class="heading heading--small">contact us</h2>
+            <p class="section__text section__text--bold section__text--narrow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestieest a, tempor magna.
+            </p>
+            <form class="section__form" action="post">
+              <label for="contact-name" class="section__label">Name</label>
+              <input class="section__input contact__input" type="text" id="contact-name" name="name" placeholder="Name" required>
+              <label for="contact-email" class="section__label">Email</label>
+              <input class="section__input contact__input" type="email" id="contact-email" name="email" placeholder="Email" required>
+
+              <label for="contact-phone" class="section__label">Phone</label>
+              <input class="section__input contact__input" type="tel" id="contact-phone" name="phone" placeholder="Phone">
+              
+              <textarea class="section__input section__textarea" name="message" id="contact-message" placeholder="Message" required></textarea>
+
+              <div class="contact__form-wrapper d-flex">
+                <address class="contact__address">
+                  <ul class="indent-0 d-flex">
+                    <li class="contact__address-item">
+                      <svg class="contact__address-svg">
+                        <use href="#map-marker"></use>
+                      </svg>
+                      <span class="section__extra-text section__extra-text--bold">5th London Boulevard, U.K.</span>
+                    </li>
+                    <li class="contact__address-item">
+                      <svg class="contact__address-svg">
+                        <use href="#phone"></use>
+                      </svg>
+                      <a class="section__extra-text section__extra-text--bold" href="tel:40729131637">+40 729 131 637</a>/<a class="section__extra-text section__extra-text--bold" href="tel:40726458782">+40 726 458 782</a>
+                    </li>
+                    <li class="contact__address-item">
+                      <svg class="contact__address-svg">
+                        <use href="#mail"></use>
+                      </svg>
+                      <a class="section__extra-text section__extra-text--bold" href="mailto:office@mindblister.com">office@mindblister.com</a>
+                    </li>
+                  </ul>
+                </address>
+  
+                <button class="btn contact__form-btn" type="submit">Send message</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </section>
+
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.1275634053427!2d-0.2136114684606685!3d51.52922009130425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487610161eec6149%3A0xb15aadc602bd24a3!2zRmlmdGggQXZlLCBMb25kb24sINCS0LXQu9C40LrQvtCx0YDQuNGC0LDQvdC40Y8!5e0!3m2!1sru!2sru!4v1604160020768!5m2!1sru!2sru" width="100%" height="575" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+
 
   </main>
 
   <footer class="footer">
-
+    <p class="footer__text">©
+      <span class="footer__text--bold">Copyright</span>
+      Mindblister  2019
+    </p>
   </footer>
 
   <svg display="none" xmlns="http://www.w3.org/2000/svg">
@@ -522,6 +591,32 @@
     <symbol id="arrow-down" viewBox="0 0 14 9">
       <title>arrow-down</title>
       <path d="M6.33594 8.28906C6.6875 8.64062 7.27344 8.64062 7.625 8.28906L12.9375 2.97656C13.3281 2.58594 13.3281 2 12.9375 1.64844L12.0781 0.75C11.6875 0.398438 11.1016 0.398438 10.75 0.75L6.96094 4.53906L3.21094 0.75C2.85938 0.398438 2.27344 0.398438 1.88281 0.75L1.02344 1.64844C0.632812 2 0.632812 2.58594 1.02344 2.97656L6.33594 8.28906Z"/>
+    </symbol>
+
+    <symbol id="mail" viewBox="0 0 512 512">
+      <title>mail</title>
+      <path d="M10.688,95.156C80.958,154.667,204.26,259.365,240.5,292.01c4.865,4.406,10.083,6.646,15.5,6.646
+				c5.406,0,10.615-2.219,15.469-6.604c36.271-32.677,159.573-137.385,229.844-196.896c4.375-3.698,5.042-10.198,1.5-14.719
+				C494.625,69.99,482.417,64,469.333,64H42.667c-13.083,0-25.292,5.99-33.479,16.438C5.646,84.958,6.313,91.458,10.688,95.156z"/>
+			<path d="M505.813,127.406c-3.781-1.76-8.229-1.146-11.375,1.542C416.51,195.01,317.052,279.688,285.76,307.885
+				c-17.563,15.854-41.938,15.854-59.542-0.021c-33.354-30.052-145.042-125-208.656-178.917c-3.167-2.688-7.625-3.281-11.375-1.542
+				C2.417,129.156,0,132.927,0,137.083v268.25C0,428.865,19.135,448,42.667,448h426.667C492.865,448,512,428.865,512,405.333
+				v-268.25C512,132.927,509.583,129.146,505.813,127.406z"/>
+    </symbol>
+
+    <symbol id="map-marker" viewBox="0 0 512 512">
+      <title>map-marker</title>
+      <path d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035
+			c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719
+			c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>
+    </symbol>
+
+    <symbol id="phone" viewBox="0 0 384 384">
+      <title>phone</title>
+      <path d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.719-3.656-23.896-0.302-30.438,6.417l-43.177,32.594
+			c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448
+			c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.813C13.823,0,0,13.823,0,30.813
+			C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z"/>
     </symbol>
 
   </svg>

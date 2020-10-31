@@ -1,8 +1,11 @@
 .book {
-  .section__extra-text {
-    color: $placeholder;
+
+  &__input {
+    width: calc(100% / 2 - 11px);
   }
 }
+
+// slider
 
 .swiper-pagination-bullet {
   width: 10px;
@@ -20,6 +23,8 @@
     margin: 0 10px;
   }
 }
+
+// end slider
 
 .events {
 
@@ -49,11 +54,15 @@
   }
 
   .section__extra-text {
-    color: rgba(#fff, 0.5);
+    color: $translucent;
   }
 }
 
 .section.events {
+
+  .section__inner {
+    flex-direction: row;
+  }
   
   .events__img-wrapper {
   
@@ -65,4 +74,62 @@
       }
     }
   }
+}
+
+.gallery {
+  display: flex;
+
+  &__img {
+    width: calc(100% / 4);
+    height: fit-content;
+    max-height: 360px;
+    object-fit: cover;
+  }
+}
+
+.contact {
+  
+
+  &__input {
+    width: calc(100% / 3 - 20px / 3);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__form-wrapper {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__address-svg {
+    margin-right: 7px;
+    width: 1em;
+    height: 1em;
+    fill: $yellow;
+    font-size: 14px;
+    vertical-align: top;
+  }
+
+  &__address-item {
+    margin-right: 15px;
+  }
+
+  &__form-btn {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+
+.section.contact {
+  color: #000;
+
+  &::before {
+    background-color: transparent;
+  }
+}
+
+.map {
+  width: calc(100vw - 17px);
 }

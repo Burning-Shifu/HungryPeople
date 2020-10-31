@@ -1,7 +1,7 @@
 .section {
   padding: 100px 0;
 
-  &:nth-child(even) {
+  &:nth-of-type(even) {
     position: relative;
     padding: 43px 0 100px;
     background-repeat: no-repeat;
@@ -40,12 +40,6 @@
     }
   }
 
-  &:last-of-type {
-    .section__inner {
-      flex-direction: row;
-    }
-  }
-
   &__title {
     margin: 0 auto 43px;
     width: fit-content;
@@ -68,6 +62,11 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 28px;
+    }
+
+    &--narrow {
+      max-width: 550px;
+      margin: 25px auto 50px;
     }
   }
 
@@ -106,6 +105,7 @@
   &__form {
     margin-top: 20px;
     margin-right: -5px;
+    font-size: 0;
   }
 
   &__label {
@@ -113,10 +113,10 @@
   }
 
   &__input {
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 10px;
     padding: 18px;
-    width: calc(100% / 2 - 11px);
+    font-size: 14px;
     background-color: #e5e5e5;
     border: none;
     border-radius: 5px;
@@ -124,6 +124,7 @@
 
     &::placeholder {
       color: $placeholder;
+      font-size: 14px;
     }
 
     &[type="date"] {
@@ -150,13 +151,20 @@
     color: #000;
   }
 
+  &__textarea {
+    display: block;
+    width: 100%;
+  }
+
   // end form
 
   &__extra-text {
     margin-top: 50px;
     margin-bottom: -55px;
     font-size: 12px;
+    color: $placeholder;
     text-align: center;
+    font-style: normal;
 
     &--bold {
       font-weight: 700;
