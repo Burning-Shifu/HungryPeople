@@ -2,7 +2,7 @@
   text-align: center;
 
   &__category {
-    padding: 20px 40px;
+    padding: 20px 3.2%;
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
@@ -23,7 +23,12 @@
     text-align: left;
     text-transform: uppercase;
     column-count: 3;
-    column-gap: 70px;
+    column-gap: 4.2%;
+
+    @include desctop-down {
+      margin-left: 50px;
+      column-count: 2;
+    }
   }
 
   &__name,
@@ -46,8 +51,12 @@
     overflow: hidden;
     white-space: nowrap;
 
+    @include desctop-down {
+      max-width: 65%;
+    }
+
     &::after {
-      content: " . . . . . . . . . . . . . . . . . .";
+      content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
     }
   }
 

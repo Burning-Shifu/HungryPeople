@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  padding-bottom: 80px;
+  padding: 25px 0;
   height: 100vh;
   color: #fff;
   background-repeat: no-repeat;
@@ -18,6 +18,11 @@
     z-index: -1;
   }
 
+  &__inner {
+    flex-direction: column;
+    height: 100%;
+  }
+
   &__top {
     justify-content: space-between;
   }
@@ -29,10 +34,15 @@
   &__menu-list {
     list-style: none;
     justify-content: space-between;
+    margin: 0 35px;
+
+    @include desctop-down {
+      margin: 0 15px;
+    }
   }
 
   &__menu-item {
-    padding: 40px 30px;
+    padding: 15px 10px;
   }
 
   &__menu-link {
@@ -41,15 +51,14 @@
     color: #fff;
   }
 
-  &__logo {
-    margin: 25px 35px 0;
-  }
-
   &__middle {
     justify-content: space-between;
     align-items: center;
     margin-top: 150px;
-    margin-bottom: 80px;
+
+    @include desctop-down {
+      margin-top: 50px;
+    }
   }
 
   &__timetable {
@@ -80,7 +89,7 @@
   }
 
   &__bottom {
-    text-align: center;
+    margin: auto;
   }
 
   &__down-btn {
