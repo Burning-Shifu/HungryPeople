@@ -1,3 +1,20 @@
+.logo {
+  display: inline-block;
+
+  &--mobile {
+    display: none;
+
+    @include tablet-landscape-down {
+      display: block;
+    }
+  }
+
+  &__img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 .book {
 
   &__input {
