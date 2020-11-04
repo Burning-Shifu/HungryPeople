@@ -35,15 +35,15 @@ svg path {
 	stroke:inherit;
 }
 
-@mixin phone {
+@mixin phone-down {
   @media (max-width: 400px) { @content; }
 }
 
-@mixin tablet-portait {
+@mixin tablet-portait-down {
   @media (min-width: 600px) { @content; }
 }
 
-@mixin tablet-landscape {
+@mixin tablet-landscape-down {
   @media (max-width: 900px) { @content; }
 }
 

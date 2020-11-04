@@ -27,6 +27,43 @@
     justify-content: space-between;
   }
 
+  &__menu-btn {
+    display: none;
+    margin-top: 22px;
+
+    @include tablet-landscape-down {
+      display: block;
+    }
+  }
+
+  &__menu-row {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: $yellow;
+    border-radius: 3px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+
+    &::before {
+      top: 7px;
+    }
+
+    &::after {
+      bottom: 7px;
+    }
+  }
+
+
   &__menu {
     flex: 1 0 0;
   }
@@ -39,6 +76,11 @@
     @include desctop-down {
       margin: 0 15px;
     }
+
+    @include tablet-landscape-down {
+      display: block;
+      background-color: $dark;
+    }
   }
 
   &__menu-item {
@@ -49,6 +91,15 @@
     font-size: 12px;
     font-weight: 700;
     color: #fff;
+  }
+
+  &__logo-wrapper {
+    
+  }
+
+  &__logo {
+    width: 150px;
+    height: 150px;
   }
 
   &__middle {

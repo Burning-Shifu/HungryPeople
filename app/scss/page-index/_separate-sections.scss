@@ -96,7 +96,7 @@
 
 .gallery {
   display: flex;
-  padding-top: 10px;
+  padding: 10px 0;
 
   &__img {
     width: calc(100% / 4);
@@ -106,7 +106,6 @@
 
     @include desctop-down {
       padding-right: 10px;
-      padding-bottom: 10px;
       max-height: 250px;
 
       &:last-child {
@@ -161,7 +160,7 @@
 .map-section {
   
   &__map {
-    width: 100vw;
+    width: 99vw;
     height: 575px;
 
     @include desctop-down {
