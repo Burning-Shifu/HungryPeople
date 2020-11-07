@@ -270,6 +270,12 @@
     }
   }
 
+  &__book-btn {
+    &::after {
+      background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+    }
+  }
+
   // end form
 
   &__extra-text {

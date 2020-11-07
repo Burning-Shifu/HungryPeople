@@ -150,7 +150,7 @@
   }
 
   &__img {
-    width: calc(100% / 4 - 30px / 4);
+    width: calc(100% / 4);
     height: fit-content;
     max-height: 360px;
     object-fit: cover;
@@ -158,6 +158,7 @@
     @include desctop-down {
       margin-top: 10px;
       margin-right: 10px;
+      width: calc(100% / 4 - 30px / 4);
       max-height: 250px;
 
       &:last-child {
@@ -220,7 +221,7 @@
     height: 1em;
     fill: $yellow;
     font-size: 14px;
-    vertical-align: top;
+    vertical-align: sub;
   }
 
   &__address-item {
@@ -234,6 +235,10 @@
   &__form-btn {
     flex-grow: 1;
     width: auto;
+
+    &::after {
+      background-image: url(../../img/svg-separate/envelope.svg);
+    }
 
     @include tablet-landscape-down {
       width: 100%;
