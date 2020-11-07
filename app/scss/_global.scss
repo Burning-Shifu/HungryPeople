@@ -39,8 +39,8 @@ svg path {
   @media (max-width: 400px) { @content; }
 }
 
-@mixin tablet-portait-down {
-  @media (min-width: 600px) { @content; }
+@mixin phone {
+  @media (max-width: 600px) { @content; }
 }
 
 @mixin tablet-landscape-down {
@@ -90,26 +90,70 @@ svg path {
     transform: translateX(-50%);
   }
 
+  @include phone {
+    font-size: 66px;
+  }
+
   &--small {
     font-size: 36px;
   }
 }
 
 .btn {
+  position: relative;
   display: inline-block;
   width: 100%;
   padding: 20px 20px;
   font-size: 12px;
   font-weight: 700;
-  color: #fff;
+  color: $dark;
   text-transform: uppercase;
   background-color: $yellow;
   white-space: nowrap;
   border: none;
   border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    display: block;
+    background: darken($yellow, 10);
+    z-index: -1;
+    transition: all 0.35s;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::after {
+      left: 0;
+      right: 0;
+      transition: all 0.35s;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 6px 4px lighten($yellow, 40);
+  }
+
+  &:active {
+    color: $translucent;
+  }
 
   &--transp {
+    color: #fff;
     background-color: transparent;
     border: 1px solid rgba(#fff, 0.5);
+    
+    &:hover {
+      
+    }
   }
 }

@@ -1,7 +1,16 @@
 .social {
 
+  @include phone {
+    margin-top: 20px;
+    order: 2;
+  }
+
   &__list {
     list-style: none;
+
+    @include phone {
+      display: flex;
+    }
   }
 
   &__icon {
@@ -15,6 +24,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include phone {
+      margin-right: 20px;
     }
   }
 

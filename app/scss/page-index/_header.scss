@@ -85,15 +85,22 @@
 
   &__menu {
     flex: 1 0 0;
+    transition: transform 0.5s ease;
 
     @include tablet-landscape-down {
-      position: fixed;
+      position: absolute;
+      transform: scale(0);
+    }
+
+    &.open {
+      display: block;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
       text-align: center;
       z-index: 1;
+      transform: scale(1);
     }
   }
 
@@ -109,6 +116,7 @@
     @include tablet-landscape-down {
       display: block;
       margin: 0;
+      padding-top: 110px;
       background-color: $dark;
       height: 100%;
     }
@@ -122,6 +130,10 @@
     font-size: 12px;
     font-weight: 700;
     color: #fff;
+
+    @include phone {
+      font-size: 16px;
+    }
   }
 
   &__middle {
@@ -132,12 +144,25 @@
     @include desctop-down {
       margin-top: 50px;
     }
+
+    @include phone {
+      flex-direction: column;
+      margin-top: 20px;
+    }
   }
 
   &__timetable {
     margin-left: 40px;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+
+    @include phone {
+      margin-left: 0;
+      margin-top: 20px;
+      transform: rotate(0deg);
+      writing-mode: horizontal-tb;
+      order: 1;
+    }
   }
 
   &__center {
@@ -154,6 +179,12 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include phone {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
 
@@ -198,6 +229,10 @@
       &::before {
         border: 4px solid rgba(#fff, 0.4);
       }
+    }
+
+    @include phone {
+      display: none;
     }
   }
 

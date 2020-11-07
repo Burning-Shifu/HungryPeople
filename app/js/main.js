@@ -12,4 +12,13 @@ downButton.onclick = function () {
   sectionAbout.scrollIntoView(top)
 };
 
+let menuButton = document.querySelector('.header__menu-btn');
+let menu = document.querySelector('.header__menu');
+
+menuButton.onclick = function () {
+  menu.classList.toggle('open');
+};
+
+
+
 var mixer = mixitup('.menu');

@@ -30,6 +30,10 @@
 
     .section__inner {
       flex-direction: row-reverse;
+
+      @include tablet-landscape-down {
+        flex-direction: column;
+      }
     }
 
     .section__content {
@@ -38,6 +42,10 @@
 
       @include desctop-down {
         margin-left: 30px;
+      }
+
+      @include tablet-landscape-down {
+        margin-left: 0;
       }
     }
 
@@ -64,6 +72,10 @@
   &__inner {
     justify-content: space-between;
     align-items: center;
+
+    @include tablet-landscape-down {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -72,6 +84,10 @@
 
     @include desctop-down {
       margin-right: 30px;
+    }
+
+    @include tablet-landscape-down {
+      margin-right: 0;
     }
   }
 
@@ -88,6 +104,10 @@
       max-width: 550px;
       margin: 25px auto 50px;
       text-align: center;
+
+      @include phone {
+        margin: 20px 0;
+      }
     }
   }
 
@@ -130,14 +150,21 @@
     @include desctop-down {
       --size: 375px;
     }
+
+    @include phone {
+      --size: 275px;
+    }
   }
 
   // form
 
   &__form {
     margin-top: 20px;
-    margin-right: -5px;
     font-size: 0;
+
+    @include tablet-landscape-down {
+      margin-bottom: 20px;
+    }
   }
 
   &__label {
@@ -149,10 +176,10 @@
     margin-bottom: 10px;
     padding: 18px;
     font-size: 14px;
+    line-height: 1em;
     background-color: #e5e5e5;
     border: none;
     border-radius: 5px;
-
 
     &::placeholder {
       color: $placeholder;
@@ -161,6 +188,12 @@
 
     &[type="date"] {
       padding: 16px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: darken(#e5e5e5, 10);
     }
   }
 
@@ -188,12 +221,62 @@
     width: 100%;
   }
 
+  &__form-btn {
+    position: relative;
+    transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background-color: darken($yellow, 10);
+      transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+      position: absolute;
+      top: 0;
+      left: 83%;
+      right: 20%;
+      bottom: 0;
+      background-size: 1.5em;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &::before {
+        left: 80%;
+        right: 0;
+        transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+      }
+
+      &::after {
+        right: 0;
+        transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+      }
+    }
+  }
+
   // end form
 
   &__extra-text {
     margin-top: 50px;
     margin-bottom: -55px;
     font-size: 12px;
+    line-height: 22px;
     color: $placeholder;
     text-align: center;
     font-style: normal;

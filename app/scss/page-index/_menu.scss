@@ -11,7 +11,18 @@
     border-right: 1px solid rgba($dark, 0.2);
 
     &:last-of-type {
-      border-right: none;
+      border-right: 1px solid transparent;
+
+      @include tablet-landscape-down {
+        border-right: 1px solid  rgba($dark, 0.2);
+      }
+    }
+
+    @include tablet-landscape-down {
+      margin-bottom: 8px;
+      margin-right: 8px;
+      padding: 20px 27px;
+      border: 1px solid rgba($dark, 0.2);
     }
   }
 
@@ -29,6 +40,16 @@
       margin-left: 50px;
       column-count: 2;
     }
+
+    @include tablet-landscape-down {
+      margin-left: 13%;
+      column-count: 1;
+    }
+
+    @include phone {
+      margin-top: 10px;
+      margin-left: 0;
+    }
   }
 
   &__name,
@@ -43,6 +64,10 @@
     font-size: 18px;
     font-weight: 700;
     color: $dark;
+
+    @include tablet-landscape-down {
+      font-family: inherit;
+    }
   }
 
   &__name {
@@ -55,14 +80,26 @@
       max-width: 65%;
     }
 
+    @include phone {
+      max-width: 100%;
+    }
+
     &::after {
-      content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+      content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+
+      @include phone {
+        display: none;
+      }
     }
   }
 
   &__price {
     padding: 0 5px;
     vertical-align: top;
+
+    @include phone {
+      padding: 0;
+    }
   }
 
   &__descr {
