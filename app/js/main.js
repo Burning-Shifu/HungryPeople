@@ -5,7 +5,7 @@ let swiper = new Swiper('.swiper-container', {
   },
 });
 
-let downButton = document.querySelector('.header__down-btn');
+let downButton = document.querySelector('.scroll-btn--down');
 let sectionAbout =  document.querySelector('.section');
 
 downButton.onclick = function () {
@@ -17,6 +17,20 @@ let menu = document.querySelector('.header__menu');
 
 menuButton.onclick = function () {
   menu.classList.toggle('open');
+};
+
+let upButton = document.querySelector('.scroll-btn--up');
+
+window.onscroll = function () {
+  if (window.pageYOffset > 400) {
+    upButton.classList.add('shown');
+  } else {
+    upButton.classList.remove('shown');
+  }
+};
+
+upButton.onclick = function () {
+  window.scrollTo(0, 0);
 };
 
 

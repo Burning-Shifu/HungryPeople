@@ -48,6 +48,7 @@
     padding: 0;
     width: 30px;
     height: 20px;
+    font-size: 0;
     background-color: transparent;
     border: none;
 
@@ -267,10 +268,6 @@
     }
   }
 
-  &__btn-svg {
-    fill: $dark;
-  }
-
   &__bottom {
     margin: auto;
   }
@@ -311,13 +308,6 @@
       }
     }
 
-    @include phone {
-      display: none;
-    }
-  }
 
-  &__btn-svg {
-    width: 12px;
-    height: 9px;
   }
 }

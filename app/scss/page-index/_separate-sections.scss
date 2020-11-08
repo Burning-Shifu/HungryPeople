@@ -20,6 +20,86 @@
   }
 }
 
+.scroll-btn {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.4s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: border 0.1s;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    outline: transparent;
+
+    &::before {
+      border: 4px solid rgba(#fff, 0.4);
+    }
+  }
+
+  &--down {
+    position: relative;
+    margin-top: 20px;
+    background-color: #fff;
+
+    &::before {
+      border: 1px solid rgba(#fff, 0.2);
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  &--up {
+    display: none;
+    position: fixed;
+    bottom: 7%;
+    right: 4%;
+    background-color: #dfdfdf;
+    opacity: 0.6;
+
+    &::before {
+      border: 1px solid rgba($yellow, 0.4);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include tablet-landscape-down {
+      opacity: 0.9;
+    }
+
+    &.shown {
+      display: block;
+    }
+
+  }
+
+  &__svg {
+    fill: $dark;
+    width: 12px;
+    height: 9px;
+  }
+}
+
 .book {
 
   &__input {
