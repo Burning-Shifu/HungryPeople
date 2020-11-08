@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+
+  &--full {
+    max-width: 1410px;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+svg path {
+	fill:inherit;
+	stroke:inherit;
+}
+
+@mixin phone-horizontal {
+  @media (max-height: 650px) { @content; }
+}
+
+@mixin phone-down {
+  @media (max-width: 400px) { @content; }
+}
+
+@mixin phone {
+  @media (max-width: 600px) { @content; }
+}
+
+@mixin tablet-landscape-down {
+  @media (max-width: 900px) { @content; }
+}
+
+@mixin desctop-down {
+  @media (max-width: 1200px) { @content; }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.indent-0 {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.heading {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  font-family: "Banny", sans-serif;
+  font-size: 96px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 5px;
+    background-color: $yellow;
+    border-radius: 5px;
+    transform: translateX(-50%);
+  }
+
+  @include phone {
+    font-size: 66px;
+  }
+
+  &--small {
+    font-size: 36px;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 20px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: $dark;
+  text-transform: uppercase;
+  background-color: $yellow;
+  white-space: nowrap;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 6px 4px lighten($yellow, 20);
+  }
+
+  &:focus:active {
+    color: $translucent;
+  }
+
+  
+}
