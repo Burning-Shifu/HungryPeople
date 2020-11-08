@@ -49,7 +49,7 @@
     outline: transparent;
 
     &::before {
-      border: 4px solid rgba(#fff, 0.4);
+      border: 4px solid rgba(var(--outline-color), 0.4);
     }
   }
 
@@ -59,7 +59,8 @@
     background-color: #fff;
 
     &::before {
-      border: 1px solid rgba(#fff, 0.2);
+      --outline-color: 255, 255, 255;
+      border: 1px solid rgba(var(--outline-color), 0.4);
     }
 
     @include phone {
@@ -76,7 +77,8 @@
     opacity: 0.6;
 
     &::before {
-      border: 1px solid rgba($yellow, 0.4);
+      --outline-color: 232, 195, 0;
+      border: 1px solid rgba(var(--outline-color), 0.4);
     }
 
     &:hover {

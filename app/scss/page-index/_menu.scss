@@ -10,6 +10,15 @@
     border: none;
     border-right: 1px solid rgba($dark, 0.2);
 
+    &:hover {
+      background-color: #ddd;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $yellow;
+    }
+
     &:last-of-type {
       border-right: 1px solid transparent;
 
